@@ -13,8 +13,8 @@
               </div>
 
               <div class="input-group mb-3">
-                <span class="input-group-addon">@</span>
                 <input type="text" class="form-control" placeholder="Email">
+                <span class="input-group-addon">@</span>
               </div>
 
               <div class="input-group mb-3">

@@ -1,16 +1,22 @@
 <template>
   <div class="app">
+
+    <!-- 顶部控件 -->
     <AppHeader/>
+
     <div class="app-body">
+      <!-- 左侧菜单控件 -->
       <Sidebar/>
-      <main class="main">
-        <breadcrumb :list="list"/>
-        <div class="container-fluid">
-          <router-view></router-view>
-        </div>
-      </main>
+        <main class="main">
+          <breadcrumb :list="list"/>
+          <div class="container-fluid">
+            <router-view></router-view>
+          </div>
+        </main>
       <AppAside/>
     </div>
+
+    <!-- 底部控件 -->
     <AppFooter/>
   </div>
 </template>

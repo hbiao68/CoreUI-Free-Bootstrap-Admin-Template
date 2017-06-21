@@ -25,8 +25,10 @@ import SimpleLineIcons from '@/views/icons/SimpleLineIcons'
 // Views - Pages
 import Page404 from '@/views/pages/Page404'
 import Page500 from '@/views/pages/Page500'
-import Login from '@/views/pages/Login'
+import Login from '@/views/pages/login/Login.vue'
 import Register from '@/views/pages/Register'
+
+import homeIndex from '@/views/pages/home/homeIndex.vue'
 
 Vue.use(Router)
 
@@ -37,10 +39,15 @@ export default new Router({
   routes: [
     {
       path: '/',
-      redirect: '/dashboard',
+      redirect: '/login',
       name: 'Home',
       component: Full,
       children: [
+        {
+          path: 'homeIndex',
+          name: 'homeIndex',
+          component: homeIndex
+        },
         {
           path: 'dashboard',
           name: 'Dashboard',
@@ -124,6 +131,11 @@ export default new Router({
       ]
     },
     {
+      path: '/login',
+      name: 'Login',
+      component: Login
+    },
+    {
       path: '/pages',
       redirect: '/pages/p404',
       name: 'Pages',
@@ -140,11 +152,6 @@ export default new Router({
           path: '500',
           name: 'Page500',
           component: Page500
-        },
-        {
-          path: 'login',
-          name: 'Login',
-          component: Login
         },
         {
           path: 'register',

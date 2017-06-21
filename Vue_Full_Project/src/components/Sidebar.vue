@@ -51,6 +51,9 @@
         <li class="nav-item">
           <router-link :to="'/charts'" class="nav-link" exact><i class="icon-pie-chart"></i> Charts</router-link>
         </li>
+        <li class="nav-item">
+          <router-link :to="{name: 'homeIndex'}" class="nav-link" exact><i class="icon-pie-chart"></i> 首页</router-link>
+        </li>
         <li class="divider"></li>
         <li class="nav-title">
           Extras
@@ -74,6 +77,7 @@
         </li>
       </ul>
     </nav>
+
   </div>
 </template>
 <script>
